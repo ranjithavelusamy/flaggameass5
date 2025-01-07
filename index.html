@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./images/vecteezy_an-antique-map-of-the-world-engraved-in-classical-style_25488956 (1).jpg">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body style="background-image: url('./images/mapping-global-data-connectivity-pixelated-world-map-concept-visualization-pixel-art-technology-316063616lig.jpg'); background-size: cover;">
+    <header>
+        <h1>Flag Guessing Game</h1>
+    </header>
+    <main>
+        <div class="game-container">
+            <img id="flag-image" alt="Flag Image">
+            <input type="text" id="guess-input" placeholder="Enter country name" />
+            <button id="submit-btn">Submit</button>
+            <div id="feedback"></div>
+            <div id="attempts-remaining"></div>
+            <div id="result"></div>
+            <button id="replay-btn">Replay</button>
+        </div>
+        <div class="stats">
+            <p>Games Played: <span id="games-played">0</span></p>
+            <p>Wins: <span id="wins">0</span></p>
+            <p>Losses: <span id="losses">0</span></p>
+        </div>
+    </main>
+    <footer>
+        <p>Certified by RanjithaVelusamy</p>
+    </footer>
+</body>
+</html>
