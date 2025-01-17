@@ -25,6 +25,15 @@ $(document).ready(function () {
     let attempts = 3;
     let isGameOver = false;
 
+    const startBtn_el = document.querySelector('.start-btn');
+    const startWindow_el = document.querySelector('.start-window');
+    const gameWindow_el = document.querySelector('.game-window');
+
+    startBtn_el.addEventListener('click', () => {
+        gameWindow_el.classList.remove('hidden');
+        startWindow_el.classList.add('hidden');
+    })
+
     // Function to start a new game
     function startGame() {
         isGameOver = false;
@@ -34,8 +43,8 @@ $(document).ready(function () {
         chosenFlag = flags[randomIndex];
 
         $("#flag-image")
-            .fadeOut(3000, function () {
-                $(this).attr("src", chosenFlag.src).fadeIn(3000);
+            .fadeOut(5, function () {
+                $(this).attr("src", chosenFlag.src).fadeIn(5);
             });
 
         $("#feedback, #result").text("").hide();
@@ -71,12 +80,12 @@ $(document).ready(function () {
             if (attempts > 0) {
                 $("#feedback")
                     .text("Wrong guess! Try again.")
-                    .css("color", "orange")
+                    .css("color", "black")
                     .slideDown();
             } else {
                 $("#feedback")
                     .text(`Game Over! The correct answer was: ${chosenFlag.country}.`)
-                    .css("color", "red")
+                    .css("color", "black")
                     .slideDown();
                 losses++;
                 isGameOver = true;
@@ -108,3 +117,8 @@ $(document).ready(function () {
     // Start the first game
     startGame();
 });
+
+
+
+
+

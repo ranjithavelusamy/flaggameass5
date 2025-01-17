@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:#B71C1C;
+    background-color:#111010;
     text-align: center;
 }
 
@@ -20,9 +20,14 @@ h1 {
 }
 
 main {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center; */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 10px;
 }
 
@@ -67,16 +72,27 @@ button:hover {
 .stats {
     margin-top: 20px;
     font-size: 18px;
-    color: #333;
+    color: #f0ecec;
     text-align: center;
+    background-color: #170234;
+   
 }
 
 footer {
-    margin-bottom: 30px;
-    background:#170234;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background: #170234;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: 900;
+    text-align: center;
+}
+
+.hidden  {
+    display: none;
 }
 
 @media (max-width: 768px) {
